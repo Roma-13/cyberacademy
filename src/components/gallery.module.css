@@ -1,0 +1,375 @@
+.glowOnHover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background:#16213b;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 80px;
+  top:-81px;
+}
+
+.glowOnHover:before {
+  content: '';
+  background: rgba(0,255,255,0.5);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glowOnHover:active {
+  color: #000
+}
+
+.glowOnHover:active:after {
+  background: transparent;
+}
+
+.glowOnHover:before {
+  opacity: 1;
+}
+
+.glowOnHover:hover{
+  scale: 1.1;
+  transition: 0.4s ease;
+}
+
+.glowOnHover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #16213b;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Raleway;
+
+  text-align: center;
+}
+
+.container2 {
+  width: 100%;
+  height: 130vh;
+}
+.container2 > h1 {
+  text-align: center;
+  color: white;
+}
+
+.galleryWrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  gap: 10px;
+  margin-top: 170px;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+
+  &:hover {
+    flex: 3;
+  }
+}
+
+.item1 {
+  background-image: url(../asets/gallery\ 1.jpg);
+  margin-top: 80px;
+
+  margin-left: 20px;
+}
+
+.item2 {
+  background-image: url(../asets/gallery\ 2.jpg);
+  margin-top: -80px;
+}
+
+.item3 {
+  background-image: url(../asets/gallery\ 3.jpg);
+  margin-top: 80px;
+}
+
+.item4 {
+  background-image: url(../asets/gallery\ 4.jpg);
+
+  margin-top: -80px;
+}
+
+.item5 {
+  background-image: url(../asets/gallery\ 6.jpg);
+
+  margin-top: 80px;
+  margin-right: 20px;
+}
+
+.headerContainer5{
+    margin-left: 190px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.headerBoxContainer5{
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.texter1Container5, .texter2Container5{
+   margin-left: 190px;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.texter2Container5{
+  font-size: 30px;
+  margin-left: 190px;
+  transition: 0.5s ease;
+}
+
+.boxesInContainer5{
+  transition: 0.5s ease;
+    margin-left: 70px;
+}
+.maper{
+    margin-left: 40px;
+    transition: 0.5s ease;
+}
+#maper{
+  transition: 0.5s ease;
+}
+
+.sidebar {
+  height: 100%;
+  width: 90px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #16213b;
+  content: "";
+  background: #16213b;
+  transition: all 0.3s;
+  box-shadow: 0px 1px 2px rgba(0,255,255,0.5), 
+              0px 2px 4px rgba(0,255,255,0.5), 
+              0px 4px 8px rgba(0,255,255,0.5), 
+              0px 8px 16px rgba(0,255,255,0.5);
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: nowrap;
+  border-bottom-right-radius: 20%;
+  border-top-right-radius: 20%;
+  backdrop-filter: blur(10px);
+}
+
+#main {
+  padding: 16px;
+  margin-left: 70px;
+  transition: margin-left 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+}
+
+.mic {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    transition: 0.5 ease;
+
+    &::before,
+    &::after {
+
+      background-image: url(../asets/reshot-icon-arrow-right-ZP2WDL9B8N.svg);
+      width: 50px;
+      height: 50px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        z-index: 2;
+        box-shadow: 0 0 10px 10px #1c084f;
+    }
+
+    &::before {
+        width: 50px;
+        height: 50px;
+        background-color: #1a084e;
+    }
+
+    &::after {
+        width: 70px;
+        height: 70px;
+        background-color: #2f1e5f;
+        animation: circle-size 0.8s linear infinite alternate;
+    }
+}
+
+.micShadow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 1;
+  box-shadow: 10px -30px 30px 15px #823ca6, 24px -10px 47px 10px #aab3d2, -21px -25px 97px 10px #5acee3, 30px 5px 17px 10px #1b7d8f, 3px 2px 30px 10px #f30bf5;
+  animation: shadow-rotate 1.5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes circle-size {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes shadow-rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 915px) {
+  .glowOnHover{
+    display: none;
+  }
+  .sidebar{
+    display: none;
+  }
+  .sidebar2{
+    display: block;
+  }
+}
+
+.sidebar2 {
+  height:100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition:top 0.5s;
+  padding-top: 60px;
+  z-index: 99999;
+}
+
+.sidebar2 a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar2 a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar2 .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main2 {
+  transition: margin-left .5s;
+}
+@media (min-width: 1900px) and (max-width: 3000px) {
+  .glowOnHover{
+    width: 370px!important;
+    height: 60px!important;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 915px) {
+  .openbtn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 99998;
+  }
+}

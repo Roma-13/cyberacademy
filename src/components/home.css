@@ -1,0 +1,2651 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0px;
+  background-color: #16213b;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background:#16213b;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin: 20px 0px;
+    font-size: 20px;
+  }
+  
+  .glow-on-hover:before {
+    content: '';
+    background: rgba(0,255,255,0.5);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+    color: #000
+  }
+  
+  .glow-on-hover:active:after {
+    background: transparent;
+  }
+  
+  .glow-on-hover:before {
+    opacity: 1;
+  }
+  
+  .glow-on-hover:hover{
+    scale: 1.1;
+    transition: 0.4s ease;
+  }
+  
+  .glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #16213b;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+  }
+  
+  
+  .container-swiper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .swiper{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   transition: transform 0.5s ease-in-out;
+    transform-origin: bottom; 
+    
+  }
+  .box-container-swiper{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 40px;
+
+  }
+  
+  .box-container-swiper:hover{
+    scale: 1.1;
+  }
+
+  .picer-container-swiper{
+    background-image: url(../asets/cur-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 300px;
+    
+    border-radius: 15px;
+  }
+
+  @media (min-width: 1900px) and (max-width: 3000px) {
+    .box-container-swiper{
+      scale: 1.5!important;
+      margin-top: 100px!important;
+    }
+    .glow-on-hover{
+      width: 370px!important;
+      height: 60px!important;
+    }
+
+  }
+
+  @media (min-width: 3000px) and (max-width: 5000px) {
+    .box-container-swiper{
+      scale: 2!important;
+      margin-top: 100px!important;
+    }
+  }
+
+  .picer-container-swiper2{
+    background-image: url(../asets/course-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper3{
+    background-image: url(../asets/course-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper4{
+    background-image: url(../asets/course-img1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px; 
+  }
+  .picer-container-swiper5{
+    background-image: url(../asets/course-img2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper6{
+    background-image: url(../asets/course-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px; 
+  }
+  .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-1{
+    background-image: url(../asets/gallery\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-2{
+    background-image: url(../asets/gallery\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-3{
+    background-image: url(../asets/gallery\ 3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-4{
+    background-image: url(../asets/gallery\ 4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-5{
+    background-image: url(../asets/gallery\ 5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-6{
+    background-image: url(../asets/gallery\ 6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-7{
+    background-image: url(../asets/kaxi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors{
+    background-image: url(../asets/kaxi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors2{
+    background-image: url(../asets/mentors1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors3{
+    background-image: url(../asets/mentors2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors4{
+    background-image: url(../asets/mentors3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors5{
+    background-image: url(../asets/mentors5.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-mentors6{
+    background-image: url(../asets/mentors6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors{
+    background-image: url(../asets/partneors.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors2{
+    background-image: url(../asets/partneors1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors3{
+    background-image: url(../asets/partneors2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors4{
+    background-image: url(../asets/partneors3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors5{
+    background-image: url(../asets/partneors4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors6{
+    background-image: url(../asets/partneors5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .picer-container-swiper-partneors7{
+    background-image: url(../asets/partneors6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .texter-container-swiper{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    background-color: transparent 10px;
+    backdrop-filter: blur(10px); 
+  }
+  
+  .header-container5{
+      margin-left: 190px;
+      margin-top: -20px;
+      margin-bottom: 20px;
+      font-size: 35px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.5s ease;
+  }
+  .header-box-container5{
+      margin-left: 120px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.5s ease;
+  }
+  .texter1-container5,.texter2-container5{
+     margin-left: 190px;
+      font-size: 28px;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.5s ease;
+  }
+  .texter2-container5{
+    font-size: 30px;
+    margin-left: 190px;
+    transition: 0.5s ease;
+  }
+  .boxes-in-container5{
+    transition: 0.5s ease;
+      margin-left: 70px;
+  }
+  .maper{
+      margin-left: 40px;
+      transition: 0.5s ease;
+  }
+  #maper{
+    transition: 0.5s ease;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #16213b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #16213b;
+    content: "";
+    background: #16213b;
+    transition: all 0.3s;
+    box-shadow: 0px 1px 2px rgba(0,255,255,0.5), 
+                0px 2px 4px rgba(0,255,255,0.5), 
+                0px 4px 8px rgba(0,255,255,0.5), 
+                0px 8px 16px rgba(0,255,255,0.5);
+    transition: 0.5s;
+    overflow-x: hidden;
+    padding-top: 60px;
+    white-space: nowrap;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+    backdrop-filter: blur(10px);
+  }
+  #main {
+    padding: 16px;
+    margin-left: 70px;
+    transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+  .mic {
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      transition: 0.5 ease;
+      &::before,
+      &::after {
+        background-image: url(../asets/reshot-icon-arrow-right-ZP2WDL9B8N.svg);
+        width: 50px;
+        height: 50px;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 100%;
+          z-index: 2;
+          box-shadow: 0 0 10px 10px rgba(0,255,255,0.5);
+      }
+      &::before {
+          width: 50px;
+          height: 50px;
+          background-color: rgba(0,255,255,0.5);
+      }
+  
+      &::after {
+          width: 70px;
+          height: 70px;
+          background-color: rgba(0,255,255,0.5);
+          animation: circle-size 0.8s linear infinite alternate;
+      }
+  
+      
+  
+      
+  }
+  
+  .mic-shadow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    z-index: 1;
+    box-shadow: 10px -30px 30px 15px , 24px -10px 47px 10px rgba(0,255,255,0.5), -21px -25px 97px 10px #5acee3, 30px 5px 17px 10px #1b7d8f, 3px 2px 30px 10px rgba(0,255,255,0.5);
+    animation: shadow-rotate 1.5s linear infinite;
+    transform-origin: center;
+  }
+  
+  
+  
+  
+  @keyframes circle-size {
+      from {
+          width: 50px;
+          height: 50px;
+      }
+      to {
+          width: 30px;
+          height: 30px;
+      }
+  }
+  
+  
+  @keyframes shadow-rotate {
+      from {
+          transform: translate(-50%, -50%) rotate(0deg);
+      }
+      to {
+          transform: translate(-50%, -50%) rotate(360deg);
+      }
+  }
+  
+  
+  
+  
+  
+  .glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background:#16213b;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 20px 0px;
+  font-size: 20px;
+  
+  }
+  
+  .glow-on-hover:before {
+  content: '';
+  background: rgba(0,255,255,0.5);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  }
+  
+  .glow-on-hover:active {
+  color: #000
+  }
+  
+  .glow-on-hover:active:after {
+  background: transparent;
+  }
+  
+
+  .glow-on-hover:before {
+  opacity: 1;
+  }
+  
+  .glow-on-hover:hover{
+  scale: 1.1;
+  transition: 0.4s ease;
+  }
+  
+  .glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #16213b;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  }
+  
+  @keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+  }
+  
+  
+  .container-swiper{
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  overflow: hidden;
+  
+  }
+  .swiper{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: bottom; 
+  
+  
+  
+  /* animation: slide 10s linear infinite; 
+  animation-timing-function: ease;
+  animation-fill-mode: forwards; */
+  
+  }
+  /* @keyframes slide {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, 100%); }
+  0% { transform: translate(0, 0); }
+  
+  } */
+  
+  
+  
+  .box-container-swiper{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+  transition: ease-in-out;
+  transition-duration: 0.5s;
+  border-radius: 15px;
+  overflow: hidden;
+  
+  margin-top: 40px;
+  
+  }
+  
+  .box-container-swiper:hover{
+  scale: 1.1;
+  
+  
+  }
+  .picer-container-swiper{
+  background-image: url(../asets/cur-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  .picer-container-swiper2{
+  background-image: url(../asets/course-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  
+  .picer-container-swiper3{
+  background-image: url(../asets/course-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  .picer-container-swiper4{
+  background-image: url(../asets/course-img2\ \(1\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  .picer-container-swiper5{
+  background-image: url(../asets/course-img2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  
+  .picer-container-swiper6{
+  background-image: url(../asets/course-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  
+  }
+  
+  
+  
+  .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+  border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-1{
+  background-image: url(../asets/gallery\ 1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-gallery-2{
+  background-image: url(../asets/gallery\ 2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-gallery-3{
+  background-image: url(../asets/gallery\ 3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-gallery-4{
+  background-image: url(../asets/gallery\ 4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-gallery-5{
+  background-image: url(../asets/gallery\ 5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-gallery-6{
+  background-image: url(../asets/gallery\ 6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-gallery-7{
+  background-image: url(../asets/kaxi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-mentors{
+  background-image: url(../asets/kaxi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-mentors2{
+  background-image: url(../asets/mentors1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-mentors3{
+  background-image: url(../asets/mentors2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-mentors4{
+  background-image: url(../asets/mentors3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-mentors5{
+  background-image: url(../asets/mentors5.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-mentors6{
+  background-image: url(../asets/mentors6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  
+  .picer-container-swiper-partneors{
+  background-image: url(../asets/partneors.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-partneors2{
+  background-image: url(../asets/partneors1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  .picer-container-swiper-partneors3{
+  background-image: url(../asets/partneors2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-partneors4{
+  background-image: url(../asets/partneors3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-partneors5{
+  background-image: url(../asets/partneors4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-partneors6{
+  background-image: url(../asets/partneors5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  .picer-container-swiper-partneors7{
+  background-image: url(../asets/partneors6.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .texter-container-swiper{
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  background-color: transparent 10px;
+  backdrop-filter: blur(10px);
+  
+  
+  }
+  
+  /*partneors*/
+  .header-container5{
+    margin-left: 190px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+  }
+  
+  .header-box-container5{
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+  }
+  
+  .texter1-container5,.texter2-container5{
+   margin-left: 190px;
+    font-size: 28px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s ease;
+  }
+  
+  .texter2-container5{
+  font-size: 30px;
+  margin-left: 190px;
+  transition: 0.5s ease;
+  }
+  
+  .boxes-in-container5{
+  transition: 0.5s ease;
+    margin-left: 70px;
+  }
+  .maper{
+    margin-left: 40px;
+    transition: 0.5s ease;
+  }
+  #maper{
+  transition: 0.5s ease;
+  }
+  
+  /*davitis*/
+  
+  
+  
+  /*swiper*/
+  
+  .swiper {
+  width: 100%;
+  height: 100%;
+  }
+  
+  .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #16213b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /*swiper*/
+  
+  /* side bar */
+  
+  .sidebar {
+  height: 100%;
+  width: 90px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #16213b;
+  content: "";
+  background: #16213b;
+  transition: all 0.3s;
+  box-shadow: 0px 1px 2px rgba(0,255,255,0.5), 
+              0px 2px 4px rgba(0,255,255,0.5), 
+              0px 4px 8px rgba(0,255,255,0.5), 
+              0px 8px 16px rgba(0,255,255,0.5);
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding-top: 60px;
+  white-space: nowrap;
+  border-bottom-right-radius: 20%;
+  border-top-right-radius: 20%;
+  backdrop-filter: blur(10px);
+  }
+  
+  #main {
+  padding: 16px;
+  margin-left: 70px;
+  transition: margin-left 0.5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  }
+  
+  
+  @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+  
+  
+  
+  
+  .mic {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    transition: 0.5 ease;
+  
+    &::before,
+    &::after {
+  
+      background-image: url(../asets/reshot-icon-arrow-right-ZP2WDL9B8N.svg);
+      width: 50px;
+      height: 50px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        z-index: 2;
+        box-shadow: 0 0 10px 10px #1c084f;
+    }
+  
+    &::before {
+        width: 50px;
+        height: 50px;
+        background-color: #1a084e;
+    }
+  
+    &::after {
+        width: 70px;
+        height: 70px;
+        background-color: #2f1e5f;
+        animation: circle-size 0.8s linear infinite alternate;
+    }
+  
+    
+  
+    
+  }
+  
+  .mic-shadow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  z-index: 1;
+  box-shadow: 10px -30px 30px 15px rgba(0,255,255,0.5), 24px -10px 47px 10px #aab3d2, -21px -25px 97px 10px #5acee3, 30px 5px 17px 10px #1b7d8f, 3px 2px 30px 10px rgba(0,255,255,0.5);
+  animation: shadow-rotate 1.5s linear infinite;
+  transform-origin: center;
+  }
+  
+  
+  
+  
+  @keyframes circle-size {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 30px;
+        height: 30px;
+    }
+  }
+  
+  
+  @keyframes shadow-rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @media only screen and (min-width: 1250px) {
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+    .box-container-swiper{
+      width: 250px;
+      height: 250px;
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      margin-top: 40px;
+    
+    }
+  
+  
+      
+      .box-container-swiper:hover{
+      scale: 1.1;
+      
+      
+      }
+      .picer-container-swiper{
+      background-image: url(../asets/cur-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper2{
+      background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper3{
+      background-image: url(../asets/course-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper4{
+        background-image: url(../asets/course-img1.jpeg);
+        background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper5{
+      background-image: url(../asets/course-img2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper6{
+      background-image: url(../asets/course-4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      
+      }
+      
+      
+      
+      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-1{
+      background-image: url(../asets/gallery\ 1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-2{
+      background-image: url(../asets/gallery\ 2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-3{
+      background-image: url(../asets/gallery\ 3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-4{
+      background-image: url(../asets/gallery\ 4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-5{
+      background-image: url(../asets/gallery\ 5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-6{
+      background-image: url(../asets/gallery\ 6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-7{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors2{
+      background-image: url(../asets/mentors1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors3{
+      background-image: url(../asets/mentors2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors4{
+      background-image: url(../asets/mentors3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-mentors5{
+      background-image: url(../asets/mentors5.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors6{
+      background-image: url(../asets/mentors6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      
+      .picer-container-swiper-partneors{
+      background-image: url(../asets/partneors.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors2{
+      background-image: url(../asets/partneors1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors3{
+      background-image: url(../asets/partneors2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors4{
+      background-image: url(../asets/partneors3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors5{
+      background-image: url(../asets/partneors4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors6{
+      background-image: url(../asets/partneors5.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors7{
+      background-image: url(../asets/partneors6.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      }
+      
+  
+  }
+  
+  
+  @media only screen and (max-width: 1250px) {
+    .box-container-swiper{
+      width: 220px;
+      height: 220px;
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      margin-top: 40px;
+    
+    }
+  
+    .glow-on-hover{
+      width: 180px;
+      height: 40px;
+    }
+  
+   
+    .box-container-swiper:hover{
+      scale: 1.1;
+      
+      
+      }
+      .picer-container-swiper{
+      background-image: url(../asets/cur-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper2{
+      background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper3{
+      background-image: url(../asets/course-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper4{
+        background-image: url(../asets/course-img1.jpeg);
+        background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper5{
+      background-image: url(../asets/course-img2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper6{
+      background-image: url(../asets/course-4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      
+      }
+      
+      
+      
+      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-1{
+      background-image: url(../asets/gallery\ 1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-2{
+      background-image: url(../asets/gallery\ 2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-3{
+      background-image: url(../asets/gallery\ 3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-4{
+      background-image: url(../asets/gallery\ 4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-5{
+      background-image: url(../asets/gallery\ 5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-6{
+      background-image: url(../asets/gallery\ 6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-7{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors2{
+      background-image: url(../asets/mentors1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors3{
+      background-image: url(../asets/mentors2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors4{
+      background-image: url(../asets/mentors3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-mentors5{
+      background-image: url(../asets/mentors5.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors6{
+      background-image: url(../asets/mentors6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      
+      .picer-container-swiper-partneors{
+      background-image: url(../asets/partneors.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors2{
+      background-image: url(../asets/partneors1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors3{
+      background-image: url(../asets/partneors2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors4{
+      background-image: url(../asets/partneors3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors5{
+      background-image: url(../asets/partneors4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors6{
+      background-image: url(../asets/partneors5.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors7{
+      background-image: url(../asets/partneors6.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 220px;
+      height: 220px;
+      border-radius: 15px;
+      }
+      
+  
+  }
+    
+  
+  
+  @media only screen and (max-width: 1100px) {
+  
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+    .box-container-swiper{
+      width: 200px;
+      height: 200px;
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      margin-top: 40px;
+    
+    }
+  
+    
+  
+  }
+  @media only screen and (max-width: 1030px) {
+  
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+  
+    .glow-on-hover{
+      width: 150px;
+      height: 40px;
+    }
+    .box-container-swiper{
+      width: 150px;
+      height: 150px;
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      margin-top: 40px;
+    
+    }
+  
+    .box-container-swiper:hover{
+      scale: 1.1;
+      
+      
+      }
+      .picer-container-swiper{
+      background-image: url(../asets/cur-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper2{
+      background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper3{
+      background-image: url(../asets/course-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper4{
+        background-image: url(../asets/course-img1.jpeg);
+        background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper5{
+      background-image: url(../asets/course-img2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper6{
+      background-image: url(../asets/course-4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      
+      }
+      
+      
+      
+      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-1{
+      background-image: url(../asets/gallery\ 1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-2{
+      background-image: url(../asets/gallery\ 2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-3{
+      background-image: url(../asets/gallery\ 3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-4{
+      background-image: url(../asets/gallery\ 4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-5{
+      background-image: url(../asets/gallery\ 5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-6{
+      background-image: url(../asets/gallery\ 6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-7{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors2{
+      background-image: url(../asets/mentors1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors3{
+      background-image: url(../asets/mentors2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors4{
+      background-image: url(../asets/mentors3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-mentors5{
+      background-image: url(../asets/mentors5.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors6{
+      background-image: url(../asets/mentors6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      
+      .picer-container-swiper-partneors{
+      background-image: url(../asets/partneors.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors2{
+      background-image: url(../asets/partneors1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors3{
+      background-image: url(../asets/partneors2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors4{
+      background-image: url(../asets/partneors3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors5{
+      background-image: url(../asets/partneors4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors6{
+      background-image: url(../asets/partneors5.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors7{
+      background-image: url(../asets/partneors6.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      border-radius: 15px;
+      }
+  
+  }
+  
+  
+  
+  @media only screen and (max-width: 580px) {
+    
+    
+    .picer-container-swiper{
+      background-image: url(../asets/cur-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper2{
+      background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper3{
+      background-image: url(../asets/course-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper4{
+        background-image: url(../asets/course-img1.jpeg);
+        background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper5{
+      background-image: url(../asets/course-img2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper6{
+      background-image: url(../asets/course-4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      
+      }
+      
+      
+      
+      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-1{
+      background-image: url(../asets/gallery\ 1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-2{
+      background-image: url(../asets/gallery\ 2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-3{
+      background-image: url(../asets/gallery\ 3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-4{
+      background-image: url(../asets/gallery\ 4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-5{
+      background-image: url(../asets/gallery\ 5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-6{
+      background-image: url(../asets/gallery\ 6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-7{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors2{
+      background-image: url(../asets/mentors1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors3{
+      background-image: url(../asets/mentors2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors4{
+      background-image: url(../asets/mentors3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-mentors5{
+      background-image: url(../asets/mentors5.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors6{
+      background-image: url(../asets/mentors6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      
+      .picer-container-swiper-partneors{
+      background-image: url(../asets/partneors.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors2{
+      background-image: url(../asets/partneors1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors3{
+      background-image: url(../asets/partneors2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors4{
+      background-image: url(../asets/partneors3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors5{
+      background-image: url(../asets/partneors4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors6{
+      background-image: url(../asets/partneors5.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors7{
+      background-image: url(../asets/partneors6.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      }
+      
+  
+      .box-container-swiper{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+        transition: ease-in-out;
+        transition-duration: 0.5s;
+        border-radius: 15px;
+        overflow: hidden;
+        
+        margin-top: 40px;
+      
+      }
+      
+  }
+  
+  
+  
+  @media only screen and (max-width: 915px) {
+  
+  
+    .picer-container-swiper{
+      background-image: url(../asets/cur-1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper2{
+      background-image: url(../asets/course-2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper3{
+      background-image: url(../asets/course-3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper4{
+        background-image: url(../asets/course-img1.jpeg);
+        background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      .picer-container-swiper5{
+      background-image: url(../asets/course-img2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      
+      .picer-container-swiper6{
+      background-image: url(../asets/course-4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      
+      }
+      
+      
+      
+      .picer-container-swiper:hover,.picer-container-swiper2:hover,.picer-container-swiper3:hover,.picer-container-swiper4:hover,.picer-container-swiper5:hover,.picer-container-swiper6:hover{
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-1{
+      background-image: url(../asets/gallery\ 1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-2{
+      background-image: url(../asets/gallery\ 2.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-gallery-3{
+      background-image: url(../asets/gallery\ 3.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-4{
+      background-image: url(../asets/gallery\ 4.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-5{
+      background-image: url(../asets/gallery\ 5.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-6{
+      background-image: url(../asets/gallery\ 6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-gallery-7{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors{
+      background-image: url(../asets/kaxi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors2{
+      background-image: url(../asets/mentors1.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors3{
+      background-image: url(../asets/mentors2.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors4{
+      background-image: url(../asets/mentors3.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-mentors5{
+      background-image: url(../asets/mentors5.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-mentors6{
+      background-image: url(../asets/mentors6.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      
+      .picer-container-swiper-partneors{
+      background-image: url(../asets/partneors.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors2{
+      background-image: url(../asets/partneors1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors3{
+      background-image: url(../asets/partneors2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors4{
+      background-image: url(../asets/partneors3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors5{
+      background-image: url(../asets/partneors4.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      
+      .picer-container-swiper-partneors6{
+      background-image: url(../asets/partneors5.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+      .picer-container-swiper-partneors7{
+      background-image: url(../asets/partneors6.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+      }
+  
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+    }
+    .glow-on-hover{
+      display: none;
+      
+      
+    }
+   
+    .sidebar{
+      display: none;
+    }
+    .sidebar2{
+      display: block;
+    }
+  }
+  
+  .logo{
+    display: block;
+    width: 150px;
+    height: 60px;
+  background-size: cover;
+  margin-top: calc(-10%);
+  margin-left: calc(35%);
+  }
+  
+  .sidebar2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 99999;
+  }
+  
+  .sidebar2 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidebar2.open {
+  width: 250px;
+}
+  .sidebar2 a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar2 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+    text-decoration: none;
+  }
+  .openbtn {
+    font-size: 40px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main2 {
+    transition: margin-left 0.5s;
+    padding: 20px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+  
+  
+  
+  
+  
+  
+  .mobile{
+    width: 100%;
+    height: 100vh;
+    display: none;
+  }
+  
+  
+  @media only screen and (max-width: 850px) {
+  
+    .container-swiper{
+      display: none;
+    }
+    .swiper0-button-next, .swiper0-button-prev {
+      position: absolute;
+      top: 270px;
+      z-index: 999;
+      cursor: pointer;
+      height: 150px;
+      text-align: center;
+      font-size: 50px;
+      color: #5acee3;
+    }
+  
+    .swiper0-button-prev{
+      left: 10px;
+    }
+    .swiper0-button-next{
+      right: 10px;
+    }
+  
+    .swiper1-button-next, .swiper1-button-prev {
+      position: absolute;
+      top: 670px;
+      z-index: 999;
+      cursor: pointer;
+      height: 150px;
+      text-align: center;
+      font-size: 50px;
+      color: #5acee3;
+    }
+    .swiper1-button-prev{
+      left: 10px;
+    }
+    .swiper1-button-next{
+      right: 10px;
+    }
+  
+  
+    .swiper2-button-next, .swiper2-button-prev {
+      position: absolute;
+      top: 1070px;
+      cursor: pointer;
+  
+      text-align: center;
+      font-size: 50px;
+      color: #5acee3;
+      z-index: 999;
+      height: 150px;
+    }
+  
+    .swiper2-button-prev{
+      left: 10px;
+    }
+    .swiper2-button-next{
+      right: 10px;
+    }
+  
+    .swiper3-button-next, .swiper3-button-prev {
+      position: absolute;
+      top: 1470px;
+      z-index: 9999;
+      cursor: pointer;
+      text-align: center;
+      font-size: 50px;
+      color: #5acee3;
+      height: 150px;
+    }
+    .swiper3-button-prev{
+      left: 10px;
+    }
+    .swiper3-button-next{
+      right: 10px;
+    }
+  
+  
+  
+    .mobile{
+      display: block;
+    }
+    .glow-on-hover{
+     display: none;
+    }
+    .sidebar{
+      display: none;
+    }
+    .box-container-swiper{
+      width: 300px;
+      height: 300px;
+      position: relative;
+      box-shadow: 1px 1px 7px rgba(0,255,255,0.5);
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      overflow: hidden;
+      
+      margin-top: 40px;
+    
+    }
+    
+  
+  }
+  
+  
+  .swiper3,.swiper4,.swiper5.swiper6 {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  
+  
+  .mobile>a{
+    width: 150px;
+    height: 50px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
